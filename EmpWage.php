@@ -1,18 +1,25 @@
 <?php
-echo "Welcome to Employee Wage Problem <br>";
+echo "Welcome to Employee Wage Problem" . "\n";
 
-$IS_PRESENT = 1;
-$IS_ABSENT = 2;
+//variables
 $WAGE_PER_HR = 20;
 $EMP_HRS;
-$num = rand(0, 2);
+//using rand() function which will print 0,1,2
+$num = rand(0,2);
 
-if ($num == $IS_PRESENT)
-    $EMP_HRS = 8;
-elseif ($num == $IS_ABSENT)
-    $EMP_HRS = 4;
-else
-    $EMP_HRS = 0;
+//using switch cases to print values
+switch($num){
+    case 1 :
+        $EMP_HRS = 8;
+        break;
+    case 2 :
+        $EMP_HRS = 4;
+        break;
+    default :
+        $EMP_HRS = 0;         
+}
+
 
 $TotalWageInDay = $WAGE_PER_HR * $EMP_HRS;
-echo "Total Wage in day : " . $TotalWageInDay;
+echo "Total Wage in Day : " .$TotalWageInDay;
+?>
